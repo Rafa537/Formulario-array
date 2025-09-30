@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #2b3a2c;
+    color: #333333;
+}
+
+/* --- Cabecera y Título --- */
+.header-principal {
+    background-color: #cfe18f;
+    color: #386641;
+    padding: 15px 0px;
+    text-align: center;
+    border-bottom: 3px solid #6a994e;
+    /* Altura vertical total: 15px (padding superior) + 15px (padding inferior) + 3px (borde) = 33px (más el alto del texto) */
+}
+
+.titulo-principal {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* --- Menú de Navegación --- */
+.nav-principal {
+    background-color: #6a994e;
+}
+
+.menu {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    /* Altura vertical total del contenedor: 10px + 10px = 20px (más el alto de los LI) */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0px 5px;
+    /* Altura vertical añadida para túnel del ratón: 10px */
+    padding-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    /* Altura vertical del enlace: 10px + 10px = 20px (más el alto del texto) */
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background-color: #386641;
+}
+
+/* --- Submenú Desplegable --- */
+.caja-causas {
+    display: none;
+    position: absolute;
+    background-color: #386641;
+    /* Ancho total de la caja: 350px */
+    width: 350px;
+    z-index: 100;
+    list-style: none;
+    padding: 0px;
+    /* Margen superior: 0px (se conecta al LI) */
+    margin-top: 0px;
+    text-align: left;
+    /* Posición Left calculada para centrar la caja de 350px bajo un elemento de ancho aproximado de 220px: (220 / 2) - (350 / 2) = 110 - 175 = -65px (Usamos -120px para ajustar visualmente) */
+    left: -120px;
+}
+
+.caja-causas li {
+    /* Ancho de la caja: 100% (igual a 350px) */
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.caja-causas a {
+    color: white;
+    /* Altura total del enlace: 12px + 18px (línea) + 12px = 42px (aprox) */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    white-space: normal;
+    line-height: 18px;
+}
+
+.caja-causas a:hover {
+    background-color: #588157;
+}
+
+.causas:hover .caja-causas {
+    display: block;
+}
+
+/* --- Contenido Principal --- */
+.contenedor-principal {
+    background-color: #a7c957;
+    /* Padding total vertical: 20px + 20px = 40px */
+    /* Ancho de contenido (si el body es 1200px): 1200px - 40px = 1160px */
+    padding: 20px;
+}
+
+.seccion {
+    /* Margen inferior: 30px */
+    margin-bottom: 30px;
+    /* Padding vertical total de la sección: 40px */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: #386641;
+    font-size: 24px;
+    /* Altura vertical de la caja (sin contar texto): 10px + 10px = 20px */
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6a994e;
+}
+
+/* --- Estructura de Columnas (Usando inline-block) --- */
+.contenedor-inline {
+    font-size: 0px;
+    text-align: center;
+    /* Padding vertical: 40px */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.columna-33 {
+    display: inline-block;
+    box-sizing: border-box;
+    /* Padding horizontal total: 20px */
+    padding: 0px 10px;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+/* Estilo para las Tarjetas de Contenido */
+.tarjeta, .tarjeta-grande {
+    background-color: #cfe18f;
+    /* Padding vertical total: 40px + 40px = 80px */
+    padding: 40px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: justify;
+    min-height: 100px;
+    margin: 10px; /* Margin definido: 10px */
+    /* Altura vertical mínima: 100px */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+/* --- Pie de Página --- */
+.footer-privacidad {
+    background-color: #386641;
+    color: white;
+    text-align: center;
+    /* Padding vertical: 30px */
+    padding: 15px 0px;
+    font-size: 14px;
+    /* Altura total de la caja (sin padding): 163px */
+    height: 163px;
+    /* Altura real total: 163px + 15px + 15px = 193px */
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #9df83c;
+    background-color: #15b632;
+    border-radius: 2px;
+    border: 2px solid black;
+    width: 500px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(22, 19, 24);
+    background-color: rgb(36, 237, 83);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
